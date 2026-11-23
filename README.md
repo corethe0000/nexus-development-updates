@@ -1,9 +1,9 @@
 # Nexus frontend - development updates
 
 ![phase](https://img.shields.io/badge/phase%201-frontend%20%26%20UX-2b6cb0)
-![open PRs](https://img.shields.io/badge/open%20PRs-13-1f6feb)
+![open PRs](https://img.shields.io/badge/open%20PRs-19-1f6feb)
 ![wallet modules](https://img.shields.io/badge/wallet%20modules-2-2f855a)
-![next](https://img.shields.io/badge/next-mobile%20wallet-f59e0b)
+![next](https://img.shields.io/badge/next-TAO%20backend-f59e0b)
 ![core](https://img.shields.io/badge/core%20(TAO)-untouched-8b8b8b)
 
 A community effort to improve the whole Nexus user-facing side and hand it back to Nexusoft. Everything here is interface and user experience, the Core (LLL-TAO) binary is untouched, so it all runs on mainnet exactly like the official software.
@@ -14,8 +14,8 @@ This board is the single place to see what is already built and shared, what is 
 
 The idea is to finalize the whole frontend and user experience first, piece by piece, and only then move to the actual blockchain backend. Once the base is all in place we can work on everything at the same time and move much faster.
 
-- **Phase 1 - frontend and user experience (now).** Explorer, desktop wallet, browser wallet, DEX module, contracts module: done and shared. The mobile wallet is the last piece.
-- **Phase 2 - mobile wallet (next).** Bring the same fixes and UX to mobile.
+- **Phase 1 - frontend and user experience.** Explorer, desktop wallet, browser wallet, DEX module, contracts module: done and shared.
+- **Phase 2 - mobile wallet.** The same fixes and UX brought to mobile: done and shared.
 - **Phase 3 - the TAO backend.** Once the frontend is finalized, work on the actual blockchain layer.
 - **Phase 4 - all together.** With the base done, frontend and backend improve in parallel.
 
@@ -99,9 +99,19 @@ Conditional payments for the desktop wallet: lock a payment with your own rules.
 Left to do:
 - [ ] Verify the contracts module so it loads for everyone ![Nexusoft][nxo]
 
-## Mobile wallet  ![next](https://img.shields.io/badge/status-next-f59e0b)
+## Mobile wallet  ![shared](https://img.shields.io/badge/status-shared-2f855a)
 
-- [ ] Bring the same fixes and user experience to the Nexus mobile wallet ![our team][own]
+Fixes and new screens for the official nexus-mobile app (Android), split into pull requests that build on each other, plus an Android build you can try right now.
+
+- [x] 6 stacked PRs against upstream (`master`): bug fixes, UI redesign, GitHub issues (closes #17 #19 #33 #38), new screens (app lock, monthly summary and CSV export, staking, names, invoices), languages (eleven besides English), and a second round after phone testing
+- [x] Community fixes build: [v0.9.9-2-fixes.1](https://github.com/corethe0000/nexus-mobile/releases/tag/v0.9.9-2-fixes.1) (Android APK, mainnet-safe, own signing key so the official app has to be uninstalled first)
+- Repo and PRs: [fork](https://github.com/corethe0000/nexus-mobile) - [all 6 PRs](https://github.com/Nexusoft/nexus-mobile/pulls?q=is%3Apr+author%3Acorethe0000)
+
+Left to do:
+- [ ] Review and merge the PRs in order, #40 to #45 ![Nexusoft][nxo]
+- [ ] Fold the changes into the next official release, signed with the Nexus key ![Nexusoft][nxo]
+- [ ] Build and test on iPhone (the code is shared, not built here without a Mac) ![Nexusoft][nxo] ![community][com] ![we can guide][help]
+- [ ] Core fix for the light Core stopping the history download early on older sigchains (#38, #33); the app works around it ![Nexusoft][nxo]
 
 ---
 
@@ -115,6 +125,7 @@ Left to do:
 | Browser wallet | [nexus-browser-wallet](https://github.com/corethe0000/nexus-browser-wallet) | [v0.3.0](https://github.com/corethe0000/nexus-browser-wallet/releases) |
 | DEX module | [nexus-dex](https://github.com/corethe0000/nexus-dex) | [v0.1.0](https://github.com/corethe0000/nexus-dex/releases) |
 | Contracts module | [nexus-contracts](https://github.com/corethe0000/nexus-contracts) | [v0.1.0](https://github.com/corethe0000/nexus-contracts/releases) |
+| Mobile wallet | [nexus-mobile fork](https://github.com/corethe0000/nexus-mobile) | [v0.9.9-2-fixes.1](https://github.com/corethe0000/nexus-mobile/releases/tag/v0.9.9-2-fixes.1) |
 
 [own]: https://img.shields.io/badge/-our%20team-2b6cb0
 [nxo]: https://img.shields.io/badge/-Nexusoft-e8663c
